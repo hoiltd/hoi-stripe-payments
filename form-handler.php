@@ -1,11 +1,6 @@
 <?php
-// Enqueue parent theme styles
-function my_theme_enqueue_styles() {
-    wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-}
-add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+// Add this file in the child theme directory
 
-// Form handler function
 function verify_recaptcha($token) {
     $url = 'https://recaptchaenterprise.googleapis.com/v1/projects/my-project-33262-1720190929777/assessments?key=YOUR_API_KEY';
     $data = array(
